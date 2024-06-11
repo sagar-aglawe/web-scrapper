@@ -1,0 +1,15 @@
+// Get all elements with the class name 'my-class'
+var elements = document.querySelectorAll('.filtered-listing__item-title');
+// Loop through the elements and log them to the console
+
+elements.forEach(function(element) {
+
+    var anchor = element.querySelector('a');
+    
+    // Check if the a element exists and has an href attribute
+    if (anchor && anchor.hasAttribute('href')) {
+        // Get the href value
+        var hrefValue = anchor.getAttribute('href');
+        console.log(hrefValue);
+    }
+});
